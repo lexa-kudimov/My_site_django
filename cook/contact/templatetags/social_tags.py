@@ -1,6 +1,6 @@
 from django import template
 
-from cook.contact.models import Social, About
+from contact.models import Social, About
 
 register = template.Library()
 
