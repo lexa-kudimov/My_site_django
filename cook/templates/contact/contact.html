@@ -8,10 +8,10 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="breadcrumb__text">
-              <h2>Contact</h2>
+              <h2>Контакты</h2>
               <div class="breadcrumb__option">
-                <a href="#">Home</a>
-                <span>Contact</span>
+                <a href="/">Главная страница</a>
+                <span>Контакты</span>
               </div>
             </div>
           </div>
@@ -39,16 +39,14 @@
           <div class="col-lg-6 col-md-6">
             <div class="contact__form">
               <div class="contact__form__title">
-                <h2>gET IN TOUCH</h2>
-                <p>My experience with Realy is absolutely positive. The themes are beautifully
-                  designed
-                  and well documented. Realy theme provides quick support.</p>
+                <h2>Связь со мной:</h2>
+                <p>Для связи со мной, оставьте свои контакты и изложите (вопросы,жалобы,предложения и т.д)</p>
               </div>
               <form action="{% url 'feedback' %}" method="post">
-{#                <input type="text" placeholder="Name">#}
+{#                <input type="text" placeholder="Имя">#}
 {#                <input type="text" placeholder="Email">#}
-{#                <input type="text" placeholder="Website">#}
-{#                <textarea placeholder="Message"></textarea>#}
+{#                <input type="text" placeholder="Мессенджеры">#}
+{#                <textarea placeholder="Сообщение"></textarea>#}
                 {% csrf_token %}
                 {{ form }}
                 <button type="submit" class="site-btn">Submit</button>
