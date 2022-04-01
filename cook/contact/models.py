@@ -3,7 +3,6 @@ from django.db import models
 
 
 class ContactModel(models.Model):
-    """ Класс модели обратной связи"""
     name = models.CharField(max_length=50)
     email = models.EmailField()
     website = models.URLField(blank=True, null=True)
@@ -15,7 +14,6 @@ class ContactModel(models.Model):
 
 
 class ContactLink(models.Model):
-    """ Класс модели контактов """
     icon = models.FileField(upload_to="icons/")
     name = models.CharField(max_length=200)
 
@@ -24,7 +22,6 @@ class ContactLink(models.Model):
 
 
 class About(models.Model):
-    """ Класс модели страницы о нас """
     name = models.CharField(max_length=50, default='')
     text = RichTextField()
     mini_text = RichTextField()
@@ -38,14 +35,12 @@ class About(models.Model):
 
 
 class ImageAbout(models.Model):
-    """ Класс модели изображений страницы о нас """
     image = models.ImageField(upload_to="about/")
     page = models.ForeignKey(About, on_delete=models.CASCADE, related_name="about_images")
     alt = models.CharField(max_length=100)
 
 
 class Social(models.Model):
-    """ Класс модели соцю сетей страницы о нас """
     icon = models.FileField(upload_to="icons/")
     name = models.CharField(max_length=200)
     link = models.URLField()

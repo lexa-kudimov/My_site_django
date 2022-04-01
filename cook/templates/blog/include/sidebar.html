@@ -6,13 +6,13 @@
   <div class="sidebar__item">
     <div class="sidebar__about__item">
       <div class="sidebar__item__title">
-        <h6>About me</h6>
+        <h6>Обо мне</h6>
       </div>
       {% get_about as about %}
       <img src="{{ about.get_first_image }}" alt="">
-      <h6>Hi every one! I,m <span>{{ about.name }}</span></h6>
+      <h6>Привет! Я Алексей, шеф-повар. Если хочешь узнать обо мне подробнее, то нажми кнопку ниже "Подробнее" <span>{{ about.name }}</span></h6>
       <p>{{ about.mini_text|safe }}</p>
-      <a href="{% url 'about' %}" class="primary-btn">Read more</a>
+      <a href="{% url 'about' %}" class="primary-btn">Подробнее</a>
     </div>
     <div class="sidebar__follow__item">
       <div class="sidebar__item__title">
@@ -26,11 +26,11 @@
       </div>
     </div>
     <div class="sidebar__item__banner">
-      <img src="/static/img/sidebar/banner.jpg" alt="">
+      <img src="/static/img/p1.jpg" alt="">
     </div>
     <div class="sidebar__item__categories">
       <div class="sidebar__item__title">
-        <h6>Categories</h6>
+        <h6>Категории</h6>
       </div>
     {% include './sidebar_category.html' %}
 

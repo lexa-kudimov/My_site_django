@@ -2,7 +2,6 @@ from django.db import models
 
 
 class Photo(models.Model):
-    """Класс модели галереи"""
     name = models.CharField(max_length=250)
     image = models.ImageField(upload_to='gallery')
     captions = models.TextField(blank=True)
@@ -17,7 +16,6 @@ class Photo(models.Model):
 
 
 class Gallery(models.Model):
-    """Модель галереи"""
     name = models.CharField(max_length=250)
     images = models.ManyToManyField(Photo)
     captions = models.TextField(max_length=250, blank=True)
